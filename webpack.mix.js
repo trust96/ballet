@@ -1,4 +1,4 @@
-const mix = require('laravel-mix');
+const mix = require("laravel-mix");
 
 /*
  |--------------------------------------------------------------------------
@@ -11,7 +11,16 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .postCss('resources/css/app.css', 'public/css', [
-        //
-    ]);
+mix.js("resources/js/app.js", "public/js").sass(
+    "resources/sass/app.scss",
+    "public/css",
+    undefined,
+    [
+        require("postcss-import"),
+        require("tailwindcss/nesting"),
+        require("tailwindcss"),
+        require("autoprefixer"),
+    ]
+);
+
+mix.browserSync({ injectChanges: false, proxy: "localhost:8000" });

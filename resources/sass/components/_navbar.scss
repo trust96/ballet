@@ -1,0 +1,47 @@
+
+.nav{
+    position: fixed;
+    top:0;
+    left:0;
+    right: 0;
+background-color: red;
+@apply py-4;
+box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+    &__wrapper{
+         display:flex;
+         justify-content: space-between;
+    }
+    &__bar{
+position: fixed;
+top:0;
+bottom: 0;
+right:0;
+left:0;
+background-color: var(--white);
+padding-top: 120px;
+
+    }
+&__logo{
+
+}
+&__list{
+}
+&__item{
+    display: flex;
+}
+&__link{
+    padding: 1.375rem 0;
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+font-size: var(--primary-500);
+text-transform: capitalize;
+}
+&__buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+}

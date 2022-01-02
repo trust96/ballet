@@ -1,0 +1,86 @@
+.button {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 50000px;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .button__label {
+    text-transform: uppercase;
+    font-size: var(--font-size-700);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0.09999px;
+    position: relative;
+    cursor:pointer;
+  }
+  .button--primary {
+    background: linear-gradient(
+      113deg,
+      var(--primary-900),
+      var(--primary-700),
+      var(--primary-500)
+    );
+    background-size: 200% 100%;
+    box-shadow: 0 22px 40px -17px rgba(var(--primary-500), 0.32);
+    color: var(--white);
+    transition: background-position 0.4s, box-shadow 0.4s, transform 0.4s;
+  }
+
+  .button--primary:hover {
+    background-position: 50% 0;
+    box-shadow: 0 22px 40px -5px rgba(var(--primary-500), 0.32);
+    transition: background-position 0.4s, box-shadow 0.4s, transform 0.4s;
+    color: var(--white);
+  }
+  .button--primary:active {
+    transform: translate3d(0, 2px, 0);
+    box-shadow: 0 22px 40px -5px rgba(245, 20, 6, 0);
+    transition: background-position 0.4s, box-shadow 0.5s, transform 0.2s;
+  }
+
+  .button--outline {
+    background-color: var(--primary-200);
+    position: relative;
+    overflow: hidden;
+    color: var(--primary-900);
+    transition: color 0.5s;
+  }
+  .button--outline:hover {
+    color: var(--white);
+    transition: color 0.5s;
+  }
+  .button--outline::before {
+    position: absolute;
+    content: "";
+    background-image: linear-gradient(
+      113deg,
+      var(--primary-900) 1%,
+      var(--primary-700) 49%,
+      var(--primary-500) 82%
+    );
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    transform: translate3d(0, 160%, 0) scale(1.1, 1.8);
+    transition: transform 0.5s, border-radius 0.3s 0.1s;
+    z-index: 0;
+  }
+  .button--outline:hover::before {
+    transform: translateZ(0) scale(1.1, 2);
+    border-radius: 50%;
+    transition: transform 0.5s, border-radius 0.2s;
+  }
+
+  .button--sm {
+    height: 2rem;
+  }
+  .button--md {
+    height: 3rem;
+  }
+  .button--lg {
+    height: 4rem;
+  }
