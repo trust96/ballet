@@ -2135,6 +2135,8 @@ __webpack_require__.r(__webpack_exports__);
   var nav = document.querySelector(".m-nav");
   var navItems = document.querySelectorAll(".nav__item");
   var slider = document.querySelector(".nav__slider");
+  var mobileNavItems = document.querySelectorAll(".m-nav__item"); // Menu
+
   menu.forEach(function (m) {
     m.addEventListener("click", function () {
       menuItems[0].classList.toggle("menu--top");
@@ -2145,7 +2147,8 @@ __webpack_require__.r(__webpack_exports__);
       menuItems[5].classList.toggle("menu--bottom");
       nav.classList.toggle("active");
     });
-  });
+  }); // slider
+
   slider.style.width = navItems[0].clientWidth + "px";
   slider.style.left = navItems[0].offsetLeft + "px";
   slider.style.backgroundColor = (0,_utils_randomColors__WEBPACK_IMPORTED_MODULE_0__["default"])();
@@ -2154,6 +2157,12 @@ __webpack_require__.r(__webpack_exports__);
       slider.style.width = navItem.clientWidth + "px";
       slider.style.left = navItem.offsetLeft + "px";
       slider.style.backgroundColor = (0,_utils_randomColors__WEBPACK_IMPORTED_MODULE_0__["default"])();
+    });
+  }); // Nav
+
+  mobileNavItems.forEach(function (navItem) {
+    navItem.addEventListener("click", function () {
+      nav.classList.remove("active");
     });
   });
 }

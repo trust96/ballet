@@ -18,7 +18,7 @@
     <nav class="nav">
         <div class="px-4 md:px-0 md:container">
             <div class="nav__wrapper">
-        <div class="nav__logo mr-7">Logo</div>
+        <a href="#" class="nav__logo mr-7"><img src={{ asset('img/logo.svg') }} alt="" class="max-w-full h-auto"></a>
 
         <ul class="nav__list mr-auto hidden lg:flex">
             <li class="nav__item"><a href="#" class="nav__link">home</a></li>
@@ -40,7 +40,7 @@
     <div class="m-nav">
         <div class="px-4 md:px-0 md:container">
         <div class="m-nav__header">
-            <div class="nav__logo mr-7">Logo</div>
+            <a href="#" class="nav__logo mr-7"><img src={{ asset('img/logo.svg') }} alt="" class="max-w-full h-auto"></a>
             <button class="menu">
                 <div class="menu__item"></div>
                 <div class="menu__item"></div>

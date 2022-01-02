@@ -722,6 +722,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
+.h-auto {
+  height: auto;
+}
+
+.max-w-full {
+  max-width: 100%;
+}
+
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;

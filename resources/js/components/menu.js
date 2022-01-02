@@ -6,6 +6,9 @@ export default function () {
     const nav = document.querySelector(".m-nav");
     const navItems = document.querySelectorAll(".nav__item");
     const slider = document.querySelector(".nav__slider");
+    const mobileNavItems = document.querySelectorAll(".m-nav__item");
+
+    // Menu
     menu.forEach((m) => {
         m.addEventListener("click", () => {
             menuItems[0].classList.toggle("menu--top");
@@ -17,6 +20,7 @@ export default function () {
             nav.classList.toggle("active");
         });
     });
+    // slider
     slider.style.width = navItems[0].clientWidth + "px";
     slider.style.left = navItems[0].offsetLeft + "px";
     slider.style.backgroundColor = getRandomColor();
@@ -25,6 +29,13 @@ export default function () {
             slider.style.width = navItem.clientWidth + "px";
             slider.style.left = navItem.offsetLeft + "px";
             slider.style.backgroundColor = getRandomColor();
+        });
+    });
+
+    // Nav
+    mobileNavItems.forEach((navItem) => {
+        navItem.addEventListener("click", () => {
+            nav.classList.remove("active");
         });
     });
 }
