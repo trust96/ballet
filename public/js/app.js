@@ -2127,10 +2127,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var _utils_randomColors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/randomColors */ "./resources/js/utils/randomColors.js");
+
 /* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__() {
   var menuItems = document.querySelectorAll(".menu__item");
   var menu = document.querySelectorAll(".menu");
   var nav = document.querySelector(".m-nav");
+  var navItems = document.querySelectorAll(".nav__item");
+  var slider = document.querySelector(".nav__slider");
   menu.forEach(function (m) {
     m.addEventListener("click", function () {
       menuItems[0].classList.toggle("menu--top");
@@ -2142,6 +2146,40 @@ __webpack_require__.r(__webpack_exports__);
       nav.classList.toggle("active");
     });
   });
+  slider.style.width = navItems[0].clientWidth + "px";
+  slider.style.left = navItems[0].offsetLeft + "px";
+  slider.style.backgroundColor = (0,_utils_randomColors__WEBPACK_IMPORTED_MODULE_0__["default"])();
+  navItems.forEach(function (navItem) {
+    navItem.addEventListener("click", function () {
+      slider.style.width = navItem.clientWidth + "px";
+      slider.style.left = navItem.offsetLeft + "px";
+      slider.style.backgroundColor = (0,_utils_randomColors__WEBPACK_IMPORTED_MODULE_0__["default"])();
+    });
+  });
+}
+
+/***/ }),
+
+/***/ "./resources/js/utils/randomColors.js":
+/*!********************************************!*\
+  !*** ./resources/js/utils/randomColors.js ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ getRandomColor)
+/* harmony export */ });
+function getRandomColor() {
+  var letters = "0123456789ABCDEF";
+  var color = "#";
+
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+
+  return color;
 }
 
 /***/ }),

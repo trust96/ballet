@@ -12,6 +12,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: relative;
     }
     &__logo {
     }
@@ -29,9 +30,24 @@
     }
     &__buttons {
     }
+    &__slider {
+        @apply bg-black;
+        display: none;
+        @screen lg {
+            height: 4px;
+            position: absolute;
+            bottom: 0;
+            z-index: -1;
+            transition: all ease-in-out 150ms;
+            display: block;
+            border-radius: 200rem;
+        }
+    }
 }
 .m-nav {
     transform: translateX(100%);
+    transition: transform ease-in-out 150ms;
+
     position: fixed;
     top: 0;
     left: 0;
@@ -67,5 +83,6 @@
     }
     &.active {
         transform: translateX(0);
+        transition: transform ease-in-out 150ms;
     }
 }

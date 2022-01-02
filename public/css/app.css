@@ -181,6 +181,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .nav__list {
@@ -196,8 +197,27 @@ body {
   text-transform: capitalize;
 }
 
+.nav__slider {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .nav__slider {
+    height: 4px;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    transition: all ease-in-out 150ms;
+    display: block;
+    border-radius: 200rem;
+  }
+}
+
 .m-nav {
   transform: translateX(100%);
+  transition: transform ease-in-out 150ms;
   position: fixed;
   top: 0;
   left: 0;
@@ -243,6 +263,7 @@ body {
 
 .m-nav.active {
   transform: translateX(0);
+  transition: transform ease-in-out 150ms;
 }
 
 .menu {

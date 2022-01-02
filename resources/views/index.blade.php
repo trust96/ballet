@@ -21,11 +21,11 @@
         <div class="nav__logo mr-7">Logo</div>
 
         <ul class="nav__list mr-auto hidden lg:flex">
-            <li class="nav__item"><a href="" class="nav__link">home</a></li>
-            <li class="nav__item"><a href="" class="nav__link">Goal</a></li>
-            <li class="nav__item"><a href="" class="nav__link">functions</a></li>
-            <li class="nav__item"><a href="" class="nav__link">pricing</a></li>
-            <li class="nav__item"><a href="" class="nav__link">contact me</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">home</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Goal</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">functions</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">pricing</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">contact me</a></li>
 
         </ul><div class="nav__buttons  hidden lg:block"><x-button class="mr-3" variant="primary" size="md">sign up</x-button><x-button variant="outline" size="md">login</x-button></div>
     <button class="menu">
@@ -33,6 +33,7 @@
         <div class="menu__item"></div>
         <div class="menu__item"></div>
     </button>
+<div class="nav__slider"></div>
 </div></div>
     </nav>
 
