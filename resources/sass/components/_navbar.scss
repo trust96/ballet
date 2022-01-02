@@ -1,47 +1,71 @@
-
-.nav{
+.nav {
     position: fixed;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     right: 0;
-background-color: red;
-@apply py-4;
-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    @apply bg-white;
 
-    &__wrapper{
-         display:flex;
-         justify-content: space-between;
+    @apply py-4;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
-    &__bar{
-position: fixed;
-top:0;
-bottom: 0;
-right:0;
-left:0;
-background-color: var(--white);
-padding-top: 120px;
-
+    &__logo {
     }
-&__logo{
-
+    &__list {
+        display: flex;
+    }
+    &__item {
+    }
+    &__link {
+        padding: 0 1rem;
+        text-decoration: none;
+        @apply font-semibold;
+        @apply text-xl;
+        text-transform: capitalize;
+    }
+    &__buttons {
+    }
 }
-&__list{
-}
-&__item{
-    display: flex;
-}
-&__link{
-    padding: 1.375rem 0;
-    flex-basis: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-font-size: var(--primary-500);
-text-transform: capitalize;
-}
-&__buttons{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+.m-nav {
+    transform: translateX(100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    @apply bg-white;
+    &__list {
+        padding-top: 90px;
+    }
+    &__item {
+        display: flex;
+    }
+    &__link {
+        padding: 1rem 0;
+        text-decoration: none;
+        @apply font-semibold;
+        @apply text-xl;
+        text-transform: capitalize;
+        flex-basis: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__buttons {
+        display: flex;
+        justify-content: center;
+    }
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @apply py-4;
+    }
+    &.active {
+        transform: translateX(0);
+    }
 }

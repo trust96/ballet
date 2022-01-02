@@ -4,32 +4,33 @@
     border: 0 solid transparent;
     background-color: transparent;
     position: relative;
-@apply md:hidden;
+    z-index: 1;
+    @apply md:hidden;
     &:focus {
-      outline: none;
+        outline: none;
     }
-  }
+}
 
-  .menu__item {
+.menu__item {
     width: 100%;
     height: 4px;
     border-radius: 100px;
     background-color: var(--primary-700);
     transition: all ease-in-out 250ms;
     &:not(:last-child) {
-      margin-bottom: 8px;
+        margin-bottom: 8px;
     }
-  }
+}
 
-  .menu--top {
+.menu--top {
     transform: translateY(12px) rotate(45deg);
     transition: all ease-in-out 150ms;
-  }
-  .menu--center {
+}
+.menu--center {
     opacity: 0;
     transition: all ease-in-out 150ms;
-  }
-  .menu--bottom {
+}
+.menu--bottom {
     transform: translateY(-12px) rotate(-45deg);
     transition: all ease-in-out 150ms;
-  }
+}
