@@ -31,7 +31,6 @@ export default function () {
             slider.style.backgroundColor = getRandomColor();
         });
     });
-
     // Nav
     mobileNavItems.forEach((navItem) => {
         navItem.addEventListener("click", () => {

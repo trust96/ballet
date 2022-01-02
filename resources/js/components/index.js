@@ -1,4 +1,6 @@
-import menu from './menu';
-addEventListener('load', ()=>{
+import menu from "./menu";
+import switchButton from "./switch";
+addEventListener("load", () => {
     menu();
-})
+    switchButton();
+});

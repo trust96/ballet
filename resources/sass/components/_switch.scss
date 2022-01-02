@@ -1,0 +1,48 @@
+.switch {
+    padding: 1px;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    @apply bg-gray-300;
+    @apply rounded-full;
+    @apply shadow-md;
+    @apply cursor-pointer;
+
+    &__wrapper {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        @apply bg-gray-200;
+        @apply rounded-full;
+        border: 1px solid;
+        @apply border-gray-300;
+        transition: all ease-in-out 250ms;
+
+        &:hover {
+            @apply bg-gray-200;
+        }
+        &:focus {
+            outline: none;
+        }
+        &.active {
+            background-color: var(--primary-700);
+            transition: all ease-in-out 250ms;
+        }
+    }
+    &__item {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: auto;
+        height: 32px;
+        width: 32px;
+        border-radius: 100%;
+        transition: all ease-in-out 250ms;
+        @apply bg-white;
+        &.active {
+            right: 0;
+            left: auto;
+            transition: all ease-in-out 250ms;
+        }
+    }
+}

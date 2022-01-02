@@ -2109,9 +2109,12 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./menu */ "./resources/js/components/menu.js");
+/* harmony import */ var _switch__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./switch */ "./resources/js/components/switch.js");
 
-addEventListener('load', function () {
+
+addEventListener("load", function () {
   (0,_menu__WEBPACK_IMPORTED_MODULE_0__["default"])();
+  (0,_switch__WEBPACK_IMPORTED_MODULE_1__["default"])();
 });
 
 /***/ }),
@@ -2164,6 +2167,29 @@ __webpack_require__.r(__webpack_exports__);
     navItem.addEventListener("click", function () {
       nav.classList.remove("active");
     });
+  });
+}
+
+/***/ }),
+
+/***/ "./resources/js/components/switch.js":
+/*!*******************************************!*\
+  !*** ./resources/js/components/switch.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__() {
+  var button = document.querySelector(".switch");
+  var switchWrapper = document.querySelector(".switch__wrapper");
+  var ball = document.querySelector(".switch__item");
+  button.addEventListener("click", function () {
+    ball.classList.toggle("active");
+    switchWrapper.classList.toggle("active");
   });
 }
 
