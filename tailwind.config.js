@@ -1,5 +1,5 @@
 module.exports = {
-    content: ["./resources/**/*.blade.php"],
+    purge: ["./resources/**/*.blade.php"],
     theme: {
         container: {
             center: true,
